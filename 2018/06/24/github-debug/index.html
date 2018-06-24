@@ -6,18 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives | Hanks blogs</title>
+  <title>关于一些在HEXO 中踩过的坑 | Hanks blogs</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Hanks blogs">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Hanks blogs">
-<meta property="og:url" content="http://yoursite.com/archives/index.html">
+  <meta name="description" content="##1、使用github pages来免费制作博客空间首先需要创建一个github的仓库空间，在github首页添加一个repository（仓库），仓库的名称必须和用户名称相同比如我的用户名称是spacetern，那么我的仓库名称也必须是spacetern.github.io，因为在githubpages中，每个账户只允许存在一个以github.io结尾的仓库。在本地制作一个ssh—key ，与">
+<meta property="og:type" content="article">
+<meta property="og:title" content="关于一些在HEXO 中踩过的坑">
+<meta property="og:url" content="http://yoursite.com/2018/06/24/github-debug/index.html">
 <meta property="og:site_name" content="Hanks blogs">
-<meta property="og:description" content="Hanks blogs">
+<meta property="og:description" content="##1、使用github pages来免费制作博客空间首先需要创建一个github的仓库空间，在github首页添加一个repository（仓库），仓库的名称必须和用户名称相同比如我的用户名称是spacetern，那么我的仓库名称也必须是spacetern.github.io，因为在githubpages中，每个账户只允许存在一个以github.io结尾的仓库。在本地制作一个ssh—key ，与">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:updated_time" content="2018-06-24T13:27:12.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hanks blogs">
-<meta name="twitter:description" content="Hanks blogs">
+<meta name="twitter:title" content="关于一些在HEXO 中踩过的坑">
+<meta name="twitter:description" content="##1、使用github pages来免费制作博客空间首先需要创建一个github的仓库空间，在github首页添加一个repository（仓库），仓库的名称必须和用户名称相同比如我的用户名称是spacetern，那么我的仓库名称也必须是spacetern.github.io，因为在githubpages中，每个账户只允许存在一个以github.io结尾的仓库。在本地制作一个ssh—key ，与">
   
     <link rel="alternative" href="/atom.xml" title="Hanks blogs" type="application/atom+xml">
   
@@ -153,97 +154,192 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-github-debug" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      关于一些在HEXO 中踩过的坑
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/24/github-debug/" class="archive-article-date">
+
+        
+        <a href="/2018/06/24/github-debug/" class="archive-article-date">
   	<time datetime="2018-06-24T13:11:04.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-24</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/24/github-debug/">关于一些在HEXO 中踩过的坑</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>##1、使用github pages来免费制作博客空间<br>首先需要创建一个github的仓库空间，在github首页添加一个repository（仓库），仓库的名称必须和用户名称相同比如我的用户名称是spacetern，那么我的仓库名称也必须是spacetern.github.io，因为在githubpages中，每个账户只允许存在一个以github.io结尾的仓库。<br>在本地制作一个ssh—key ，与github上的仓库空间相关联。</p>
+<p>##2、使用node环境本地安装部署HEXO<br>首先安装node环境，成功安装之后使用npm包管理工具下载安装全局HEXO环境。利用HEXO命令在本地部署好博客环境，依赖文件为packege.json ，配置文件为_config.yml</p>
+<p>###初始化项目</p>
+<p>hexo init</p>
+<p>###在配置文件中加入</p>
+<blockquote>
+<p>  type: git </p>
+</blockquote>
+<blockquote>
+<p>repository: <a href="https://github.com/spacetern/spacetern.github.io.git" target="_blank" rel="noopener">https://github.com/spacetern/spacetern.github.io.git</a> </p>
+</blockquote>
+<blockquote>
+<p>name: spacetern </p>
+</blockquote>
+<blockquote>
+<p>email: <a href="mailto:574934716@qq.com" target="_blank" rel="noopener">574934716@qq.com</a> </p>
+</blockquote>
+<blockquote>
+<p>branch: master</p>
+</blockquote>
+<p>##3、将部署推送到github上</p>
+<p>###可以现在本地预览</p>
+<blockquote>
+<p>hexo s</p>
+</blockquote>
+<p>###生成本地文件</p>
+<blockquote>
+<p>hexo g  或者<br>hexo genarate</p>
+</blockquote>
+<p>###使用hexo deploy部署到github上  </p>
+<blockquote>
+<p>hexo deploy</p>
+</blockquote>
+<p>###或者</p>
+<blockquote>
+<p>hexo d -g</p>
+</blockquote>
 
-        <div class="article-info info-on-right">
-          
-          
+      
 
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/06/24/github-debug/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/24/test-md/" class="archive-article-date">
-  	<time datetime="2018-06-24T06:49:16.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-24</time>
-</a>
-        </div>
-    	 
-        <div class="article-info info-on-right">
-          
-          
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/06/24/hello-world/" class="archive-article-date">
-  	<time datetime="2018-06-24T05:40:34.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-06-24</time>
-</a>
-        </div>
-    	 
+<nav id="article-nav">
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/06/24/hello-world/">Hello World</a>
-    </h1>
+  
+    <a href="/2018/06/24/test-md/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title"></div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+  
+  
   
 
-        <div class="article-info info-on-right">
-          
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -266,8 +362,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
